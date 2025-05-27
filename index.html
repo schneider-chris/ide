@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria Cristã - Livros Inspiradores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Livraria Cristã</h1>
+            </div>
+            <div class="search-cart">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar livros...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart">
+                    <button><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="book-carousel">
+            <h2>Livros em Destaque</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                    <div class="book" data-book-id="1">
+                        <img src="https://m.media-amazon.com/images/I/41ZJ7CJNQVL._SY425_.jpg" alt="Capa do livro">
+                        <h3>A Cabana</h3>
+                        <p>William P. Young</p>
+                        <div class="price">R$ 39,90</div>
+                    </div>
+                    <div class="book" data-book-id="2">
+                        <img src="https://m.media-amazon.com/images/I/51Xx7AqDiML._SY425_.jpg" alt="Capa do livro">
+                        <h3>Casamento Blindado</h3>
+                        <p>Renato e Cristiane Cardoso</p>
+                        <div class="price">R$ 49,90</div>
+                    </div>
+                    <div class="book" data-book-id="3">
+                        <img src="https://m.media-amazon.com/images/I/51YlYTFq5VL._SY425_.jpg" alt="Capa do livro">
+                        <h3>O Peregrino</h3>
+                        <p>John Bunyan</p>
+                        <div class="price">R$ 29,90</div>
+                    </div>
+                    <div class="book" data-book-id="4">
+                        <img src="https://m.media-amazon.com/images/I/51J6YjTl5TL._SY425_.jpg" alt="Capa do livro">
+                        <h3>O Poder do Hábito</h3>
+                        <p>Charles Duhigg</p>
+                        <div class="price">R$ 59,90</div>
+                    </div>
+                    <div class="book" data-book-id="5">
+                        <img src="https://m.media-amazon.com/images/I/41XWjXWQJZL._SY425_.jpg" alt="Capa do livro">
+                        <h3>Bíblia de Estudo</h3>
+                        <p>Almeida Revista e Atualizada</p>
+                        <div class="price">R$ 129,90</div>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Categorias</h2>
+            <div class="category-list">
+                <button class="category-btn active">Todos</button>
+                <button class="category-btn">Bíblias</button>
+                <button class="category-btn">Devocionais</button>
+                <button class="category-btn">Casamento</button>
+                <button class="category-btn">Infantil</button>
+            </div>
+        </section>
+
+        <div class="book-modal" id="bookModal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-left">
+                        <img id="modalBookImage" src="" alt="Capa do livro">
+                    </div>
+                    <div class="modal-right">
+                        <h2 id="modalBookTitle"></h2>
+                        <p class="author" id="modalBookAuthor"></p>
+                        <p class="price" id="modalBookPrice"></p>
+                        <p class="description" id="modalBookDescription"></p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
