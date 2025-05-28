@@ -1,6 +1,7 @@
 body {
     background-color: white;
     color: #333;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /*Cabeçalho*/
@@ -36,4 +37,44 @@ header {
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Lista de livros */
+.livro-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.livro {
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.livro:hover {
+    transform: translateY(-5px);
+}
+
+.livro-capa {
+    width: 150px;
+    height: 220px;
+    margin: 0 auto 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.livro-titulo {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
