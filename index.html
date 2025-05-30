@@ -62,5 +62,103 @@
         </div>
     </div>
     
+    <!-- Páginas de detalhes dos livros -->
+    
+    <!-- Detalhes Livro 1 -->
+    <div id="book1" class="book-detail">
+        <div class="detail-header">
+            <div class="detail-cover">Capa do Livro</div>
+            <div class="detail-info">
+                <h1 class="detail-title">A Cabana</h1>
+                <div class="detail-author">William P. Young</div>
+                <div class="detail-price">R$ 39,90</div>
+            </div>
+        </div>
+        
+        <div class="detail-synopsis">
+            <h3>Sinopse</h3>
+            <p>Durante uma viagem de fim de semana, a filha mais nova de Mackenzie Allen Phillips é raptada e evidências de que ela pode ter sido brutalmente assassinada são encontradas numa velha cabana. Após quatro anos vivendo numa tristeza profunda causada pela culpa e pela saudade da menina, Mack recebe um estranho bilhete, aparentemente escrito por Deus, convidando-o a voltar à cabana onde aconteceu a tragédia. Apesar de desconfiado, ele vai ao local numa tarde de inverno e adentra passo a passo o cenário de seu mais terrível pesadelo. O que encontra lá muda sua vida para sempre.</p>
+        </div>
+        
+        <div class="detail-reviews">
+            <h3>Avaliações</h3>
+            <div class="review">
+                <div class="review-author">Maria Silva</div>
+                <div class="review-text">Um livro que mudou minha perspectiva sobre o sofrimento e o amor de Deus.</div>
+                <div class="review-rating">★★★★★</div>
+            </div>
+            <div class="review">
+                <div class="review-author">João Santos</div>
+                <div class="review-text">Leitura transformadora que recomendo a todos que buscam respostas.</div>
+                <div class="review-rating">★★★★☆</div>
+            </div>
+        </div>
+        
+        <a href="#" class="back-button" onclick="hideBookDetails()">Voltar para a lista</a>
+    </div>
+    
+    <!-- Detalhes Livro 2 -->
+    <div id="book2" class="book-detail">
+        <div class="detail-header">
+            <div class="detail-cover">Capa do Livro</div>
+            <div class="detail-info">
+                <h1 class="detail-title">Cristianismo Puro e Simples</h1>
+                <div class="detail-author">C.S. Lewis</div>
+                <div class="detail-price">R$ 45,90</div>
+            </div>
+        </div>
+        
+        <div class="detail-synopsis">
+            <h3>Sinopse</h3>
+            <p>Considerado por muitos o melhor livro de C.S. Lewis, Cristianismo Puro e Simples reúne as legendas transmissões radiofônicas feitas pelo autor durante a Segunda Guerra Mundial. Nesta obra, Lewis apresenta os principais elementos da cosmovisão cristã, guiando o leitor em uma jornada que vai da descoberta da lei natural à reflexão sobre conceitos como perdão, caridade, esperança, fé e a relação entre Deus e o homem.</p>
+        </div>
+        
+        <div class="detail-reviews">
+            <h3>Avaliações</h3>
+            <div class="review">
+                <div class="review-author">Ana Oliveira</div>
+                <div class="review-text">Lewis tem uma capacidade incrível de explicar conceitos complexos de forma simples.</div>
+                <div class="review-rating">★★★★★</div>
+            </div>
+            <div class="review">
+                <div class="review-author">Pedro Costa</div>
+                <div class="review-text">Leitura essencial para quem quer entender o cerne da fé cristã.</div>
+                <div class="review-rating">★★★★★</div>
+            </div>
+        </div>
+        
+        <a href="#" class="back-button" onclick="hideBookDetails()">Voltar para a lista</a>
+    </div>
+    
+    <!-- Detalhes dos outros livros seguiriam o mesmo padrão -->
+    
+    <footer>
+        <p>Livros Cristãos &copy; 2023 - Todos os direitos reservados</p>
+    </footer>
+    
+    <script>
+        function showBookDetail(bookId) {
+            // Esconde todos os detalhes primeiro
+            document.querySelectorAll('.book-detail').forEach(detail => {
+                detail.classList.remove('active');
+            });
+            
+            // Mostra os detalhes do livro selecionado
+            document.getElementById(bookId).classList.add('active');
+            
+            // Rola a página para os detalhes
+            document.getElementById(bookId).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function hideBookDetails() {
+            // Esconde todos os detalhes
+            document.querySelectorAll('.book-detail').forEach(detail => {
+                detail.classList.remove('active');
+            });
+            
+            // Rola de volta para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
